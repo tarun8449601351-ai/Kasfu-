@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0,
+      maximum-scale=1.0, user-scalable=no">
 
 <title>NUMBER STREAKS 💫</title>
 
@@ -13,142 +15,237 @@
     box-sizing:border-box;
 }
 
+html{
+    background:#000;
+}
+
 body{
+    margin:0;
     min-height:100vh;
     background:#000;
     font-family:Arial,Helvetica,sans-serif;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     overflow-x:hidden;
 }
 
+/* PHONE FRAME */
 .page{
+    position:relative;
+
     width:100%;
     max-width:430px;
+
     min-height:100vh;
-    padding:35px 24px 40px;
+    height:auto;
+
     background:#030303;
-    border:1px solid rgba(255,215,0,.35);
-    border-radius:45px;
-    box-shadow:
-        0 0 25px rgba(255,215,0,.18),
-        inset 0 0 35px rgba(255,215,0,.04);
+
+    padding:28px 22px 32px;
+
     display:flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
+
+    border-radius:38px;
+
+    border:1px solid rgba(255,215,0,.28);
+
+    box-shadow:
+        0 0 20px rgba(255,215,0,.15),
+        inset 0 0 35px rgba(255,215,0,.035);
 }
 
-/* IMAGE */
+/* DESKTOP PHONE SIZE */
+@media(min-width:500px){
+
+    body{
+        padding:20px;
+    }
+
+    .page{
+        width:390px;
+        min-height:844px;
+        height:844px;
+
+        border-radius:42px;
+
+        box-shadow:
+            0 0 30px rgba(255,215,0,.18),
+            inset 0 0 40px rgba(255,215,0,.04);
+    }
+}
+
+/* LOGO */
 .logo{
-    width:270px;
-    height:270px;
-    object-fit:cover;
+    width:255px;
+    height:255px;
+
+    margin-top:28px;
+
     border-radius:50%;
-    border:7px solid #ffd92e;
-    margin-top:30px;
+
+    object-fit:cover;
+
+    border:6px solid #ffd92e;
+
     box-shadow:
         0 0 15px #ffd92e,
-        0 0 45px rgba(255,217,46,.55),
-        0 0 80px rgba(255,217,46,.25);
+        0 0 40px rgba(255,217,46,.5),
+        0 0 70px rgba(255,217,46,.22);
 }
 
 /* HEADLINE */
 h1{
-    margin-top:58px;
+    margin-top:42px;
+
     color:#fff;
-    font-size:42px;
-    line-height:1.08;
+
+    font-size:38px;
+    line-height:1.05;
+
     font-weight:900;
+
     letter-spacing:-1px;
-    text-shadow:0 3px 12px rgba(255,255,255,.15);
+
+    white-space:nowrap;
+
+    text-shadow:
+        0 3px 12px rgba(255,255,255,.15);
 }
 
-/* SUBTEXT */
+/* DESCRIPTION */
 .subtitle{
-    margin-top:65px;
+    margin-top:54px;
+
     color:#ffd928;
-    font-size:22px;
-    line-height:1.5;
+
+    font-size:20px;
+
+    line-height:1.55;
+
     font-weight:500;
 }
 
-/* BUTTON */
+/* TELEGRAM BUTTON */
 .join-btn{
     width:100%;
-    max-width:350px;
-    margin-top:55px;
-    padding:27px 15px;
-    border:none;
-    border-radius:60px;
-    background:linear-gradient(135deg,#e6bd28,#fff08a,#e4bd27);
+    max-width:335px;
+
+    margin-top:45px;
+
+    padding:25px 10px;
+
+    border-radius:55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e5bc25,
+            #fff08a,
+            #e4bd27
+        );
+
     color:#111;
-    font-size:23px;
+
+    font-size:21px;
+
     font-weight:800;
+
     text-decoration:none;
+
     display:block;
+
     box-shadow:
         0 0 15px rgba(255,215,0,.5),
-        0 0 40px rgba(255,215,0,.3);
-    transition:.25s;
+        0 0 40px rgba(255,215,0,.28);
+
     animation:pulse 2s infinite;
+
+    transition:.2s;
 }
 
 .join-btn:active{
     transform:scale(.96);
 }
 
-.join-btn:hover{
-    transform:scale(1.03);
-}
-
 /* COMMUNITY */
 .community{
-    margin-top:65px;
+    margin-top:48px;
+
     color:#ffd928;
-    font-size:22px;
+
+    font-size:20px;
+
     font-weight:800;
 }
 
-/* BOTTOM TEXT */
+/* BOTTOM */
 .bottom{
-    margin-top:58px;
+    margin-top:42px;
+
     color:#777;
-    font-size:17px;
+
+    font-size:15px;
+
     letter-spacing:1px;
+
     line-height:1.5;
+
+    white-space:nowrap;
 }
 
-/* BUTTON ANIMATION */
+/* GLOW ANIMATION */
 @keyframes pulse{
+
     0%,100%{
         box-shadow:
-        0 0 15px rgba(255,215,0,.45),
-        0 0 35px rgba(255,215,0,.25);
+            0 0 15px rgba(255,215,0,.45),
+            0 0 35px rgba(255,215,0,.22);
     }
+
     50%{
         box-shadow:
-        0 0 25px rgba(255,215,0,.8),
-        0 0 60px rgba(255,215,0,.4);
+            0 0 25px rgba(255,215,0,.8),
+            0 0 55px rgba(255,215,0,.38);
     }
 }
 
-/* MOBILE */
-@media(max-width:430px){
+/* SMALL PHONES */
+@media(max-width:360px){
+
     .page{
-        border-radius:35px;
-        padding-left:22px;
-        padding-right:22px;
+        padding-left:16px;
+        padding-right:16px;
     }
 
     .logo{
-        width:260px;
-        height:260px;
+        width:220px;
+        height:220px;
     }
 
     h1{
-        font-size:40px;
+        font-size:32px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+    .join-btn{
+        font-size:19px;
+    }
+
+    .community{
+        font-size:18px;
+    }
+
+    .bottom{
+        font-size:13px;
     }
 }
 </style>
@@ -164,9 +261,7 @@ h1{
         alt="Number Streaks"
     >
 
-    <h1>
-        NUMBER STREAKS 💫
-    </h1>
+    <h1>NUMBER STREAKS 💫</h1>
 
     <div class="subtitle">
         Join the official Telegram channel for<br>
