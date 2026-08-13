@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0,
-      maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NUMBER STREAKS 💫</title>
 
@@ -15,13 +13,12 @@
     box-sizing:border-box;
 }
 
-html{
-    background:#000;
+html,body{
+    width:100%;
+    min-height:100%;
 }
 
 body{
-    margin:0;
-    min-height:100vh;
     background:#000;
     font-family:Arial,Helvetica,sans-serif;
 
@@ -29,223 +26,196 @@ body{
     justify-content:center;
     align-items:center;
 
-    overflow-x:hidden;
+    min-height:100vh;
+    padding:15px;
+
+    overflow:hidden;
 }
 
-/* PHONE FRAME */
+/* MAIN PHONE FRAME */
 .page{
-    position:relative;
-
     width:100%;
-    max-width:430px;
-
-    min-height:100vh;
-    height:auto;
+    max-width:340px;
+    height:740px;
 
     background:#030303;
 
-    padding:28px 22px 32px;
+    border-radius:32px;
+    border:1px solid rgba(255,215,0,.30);
+
+    box-shadow:
+        0 0 20px rgba(255,215,0,.15),
+        inset 0 0 25px rgba(255,215,0,.035);
 
     display:flex;
     flex-direction:column;
     align-items:center;
+
     text-align:center;
 
-    border-radius:38px;
+    padding:25px 18px;
 
-    border:1px solid rgba(255,215,0,.28);
-
-    box-shadow:
-        0 0 20px rgba(255,215,0,.15),
-        inset 0 0 35px rgba(255,215,0,.035);
+    overflow:hidden;
 }
 
-/* DESKTOP PHONE SIZE */
-@media(min-width:500px){
-
-    body{
-        padding:20px;
-    }
-
-    .page{
-        width:390px;
-        min-height:844px;
-        height:844px;
-
-        border-radius:42px;
-
-        box-shadow:
-            0 0 30px rgba(255,215,0,.18),
-            inset 0 0 40px rgba(255,215,0,.04);
-    }
-}
-
-/* LOGO */
+/* IMAGE */
 .logo{
-    width:255px;
-    height:255px;
+    width:190px;
+    height:190px;
 
-    margin-top:28px;
-
-    border-radius:50%;
+    margin-top:18px;
 
     object-fit:cover;
+    border-radius:50%;
 
-    border:6px solid #ffd92e;
+    border:5px solid #ffd92e;
 
     box-shadow:
-        0 0 15px #ffd92e,
-        0 0 40px rgba(255,217,46,.5),
-        0 0 70px rgba(255,217,46,.22);
+        0 0 12px #ffd92e,
+        0 0 30px rgba(255,217,46,.50);
 }
 
 /* HEADLINE */
 h1{
-    margin-top:42px;
+    margin-top:32px;
 
     color:#fff;
 
-    font-size:38px;
-    line-height:1.05;
-
+    font-size:30px;
     font-weight:900;
 
-    letter-spacing:-1px;
+    line-height:1.1;
 
     white-space:nowrap;
-
-    text-shadow:
-        0 3px 12px rgba(255,255,255,.15);
 }
 
-/* DESCRIPTION */
+/* SUBTITLE */
 .subtitle{
-    margin-top:54px;
+    margin-top:35px;
 
     color:#ffd928;
 
-    font-size:20px;
+    font-size:16px;
 
-    line-height:1.55;
-
-    font-weight:500;
+    line-height:1.45;
 }
 
-/* TELEGRAM BUTTON */
+/* BUTTON */
 .join-btn{
     width:100%;
-    max-width:335px;
+    max-width:285px;
 
-    margin-top:45px;
+    margin-top:35px;
 
-    padding:25px 10px;
+    padding:20px 8px;
 
-    border-radius:55px;
+    border-radius:50px;
 
     background:
         linear-gradient(
             135deg,
-            #e5bc25,
+            #e3ba25,
             #fff08a,
-            #e4bd27
+            #e3ba25
         );
 
     color:#111;
 
-    font-size:21px;
-
+    font-size:17px;
     font-weight:800;
 
     text-decoration:none;
 
-    display:block;
-
     box-shadow:
-        0 0 15px rgba(255,215,0,.5),
-        0 0 40px rgba(255,215,0,.28);
+        0 0 15px rgba(255,215,0,.45),
+        0 0 30px rgba(255,215,0,.22);
 
     animation:pulse 2s infinite;
-
-    transition:.2s;
-}
-
-.join-btn:active{
-    transform:scale(.96);
 }
 
 /* COMMUNITY */
 .community{
-    margin-top:48px;
+    margin-top:38px;
 
     color:#ffd928;
 
-    font-size:20px;
+    font-size:17px;
 
     font-weight:800;
 }
 
-/* BOTTOM */
+/* BOTTOM TEXT */
 .bottom{
-    margin-top:42px;
+    margin-top:34px;
 
-    color:#777;
+    color:#707070;
 
-    font-size:15px;
+    font-size:12px;
 
-    letter-spacing:1px;
-
-    line-height:1.5;
+    letter-spacing:.7px;
 
     white-space:nowrap;
 }
 
-/* GLOW ANIMATION */
+/* ANIMATION */
 @keyframes pulse{
-
     0%,100%{
         box-shadow:
-            0 0 15px rgba(255,215,0,.45),
-            0 0 35px rgba(255,215,0,.22);
+        0 0 12px rgba(255,215,0,.4),
+        0 0 25px rgba(255,215,0,.2);
     }
 
     50%{
         box-shadow:
-            0 0 25px rgba(255,215,0,.8),
-            0 0 55px rgba(255,215,0,.38);
+        0 0 20px rgba(255,215,0,.75),
+        0 0 40px rgba(255,215,0,.3);
     }
 }
 
-/* SMALL PHONES */
-@media(max-width:360px){
+/* MOBILE */
+@media(max-width:380px){
+
+    body{
+        padding:8px;
+    }
 
     .page{
-        padding-left:16px;
-        padding-right:16px;
+        width:320px;
+        height:700px;
+
+        padding:20px 16px;
+        border-radius:30px;
     }
 
     .logo{
-        width:220px;
-        height:220px;
+        width:170px;
+        height:170px;
     }
 
     h1{
-        font-size:32px;
+        font-size:27px;
+        margin-top:27px;
     }
 
     .subtitle{
-        font-size:18px;
+        margin-top:30px;
+        font-size:15px;
     }
 
     .join-btn{
-        font-size:19px;
+        margin-top:30px;
+        padding:18px 6px;
+        font-size:16px;
     }
 
     .community{
-        font-size:18px;
+        margin-top:32px;
+        font-size:16px;
     }
 
     .bottom{
-        font-size:13px;
+        margin-top:28px;
+        font-size:11px;
     }
 }
 </style>
